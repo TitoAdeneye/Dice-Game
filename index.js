@@ -1,28 +1,39 @@
-// first dice
+    // event listener
 
-var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+    document.querySelector("button").addEventListener("click",handleClick); 
 
-var images1 = "IMAGES/dice" + randomNumber1 + ".png";
+    // function
+    
+    function handleClick(){
 
-var dice1 = document.querySelectorAll("img")[0].setAttribute("src",images1);
+    // first dice
+
+    var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+
+    var images1 = "IMAGES/dice" + randomNumber1 + ".png";
 
 
-// second dice
+    var dice1 = document.querySelectorAll("img")[0].setAttribute("src",images1);
 
-var randomNumber2 = Math.floor(Math.random()*6) + 1;
+    // second dice
 
-var images2= "IMAGES/dice" + randomNumber2 + ".png";
+    var randomNumber2 = Math.floor(Math.random()*6) + 1;
 
-var dice2 = document.querySelectorAll("img")[1].setAttribute("src",images2);
+    var images2= "IMAGES/dice" + randomNumber2 + ".png";
 
-// condition
+    var dice2 = document.querySelectorAll("img")[1].setAttribute("src",images2);
 
-if (images1 > images2){
-    document.querySelector("h2").textContent= "Player 1 Wins!";
+    // condition
+
+    if (images1 > images2){
+        document.querySelector("h2").textContent= "Player 1 Wins!";
+    }
+    else if(images1===images2){
+        document.querySelector("h2").textContent= "It's a tie, refresh!";
+    }
+    else{
+        document.querySelector("h2").textContent= "Player 2 Wins!";
+    }
+
 }
-else if(images1===images2){
-    document.querySelector("h2").textContent= "It's a tie, refresh!";
-}
-else{
-    document.querySelector("h2").textContent= "Player 2 Wins!";
-}
+
