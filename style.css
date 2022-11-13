@@ -53,4 +53,35 @@
     margin-top: 5%;
     text-align: center;
   }
+
+  /* media query */
+
+  @media (max-width:991px){
+    
+    h1{
+      font-size: 3rem;
+    }
+
+    h2{
+      font-size: 2rem;
+    }
+
+    .dice p{
+      font-size: 1rem;
+    }
+
+    .dice img{
+      height: 50%;
+      width: 50%;
+    }
+
+    button{
+      font-size: 1rem;
+      padding: 5px;
+    }
+
+    footer{
+      font-size: small;
+    }
+  }
   
